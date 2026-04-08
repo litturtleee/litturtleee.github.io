@@ -1,0 +1,58 @@
+baseURL = 'https://litturtleee.github.io/'
+languageCode = 'zh-cn'
+title = 'litturtleee'
+theme = 'PaperMod'
+paginate = 5
+enableRobotsTXT = true
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = 'production'
+  title = 'litturtleee'
+  description = '个人笔记与博文'
+  author = 'litturtleee'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+  comments = false
+
+  [params.homeInfoParams]
+    Title = '你好 👋'
+    Content = '欢迎来到我的博客，这里记录我的学习笔记和想法。'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/litturtleee'
+
+[menu]
+  [[menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 30
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
