@@ -18,6 +18,7 @@ import re
 import shutil
 import sys
 import subprocess
+from datetime import timezone, timedelta
 from pathlib import Path
 
 VAULT = Path("/Users/wubuwei/Documents/Obsidian Vault")
@@ -81,6 +82,15 @@ def process_note(note_rel_path: str, push: bool = True):
             return match.group(0)
 
     new_content = embed_pattern.sub(replace_embed, content)
+
+    # 修正 frontmatter 中的日期：确保带时区（+08:00），避免 Hugo 误判为未来日期
+    CST = timezone(timedelta(hours=8))
+    def fix_date(m):
+        d = m.group(1)
+        if "+" not in d and "T" not in d:
+            return f"date: {d}T00:00:00+08:00"
+        return m.group(0)
+    new_content = re.sub(r'^date:\s*(\S+)', fix_date, new_content, flags=re.MULTILINE)
 
     # 写出处理后的笔记
     post_name = note_path.stem + ".md"
