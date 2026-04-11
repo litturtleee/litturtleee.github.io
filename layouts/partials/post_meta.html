@@ -18,7 +18,7 @@
 {{- end }}
 {{- end }}
 
-{{- if (.Param "ShowPageViewCount") -}}
+{{- if and (.Param "ShowPageViewCount") (eq .Kind "page") -}}
 {{- $scratch.Add "meta" (slice "<span id=\"busuanzi_value_page_pv\">--</span>&nbsp;次阅读") }}
 {{- end }}
 
