@@ -27,7 +27,8 @@ enableRobotsTXT = true
   hideSummary = false
   showtoc = false
   tocopen = false
-  comments = false
+  comments = true
+  ShowPageViewCount = true
 
   [params.homeInfoParams]
     Title = '你好 👋'
