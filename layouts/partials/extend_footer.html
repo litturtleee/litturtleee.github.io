@@ -1,0 +1,5 @@
+{{- if and (.Param "ShowPageViewCount") (eq .Section "posts") }}
+<div style="font-size: 0.85rem; color: var(--secondary); margin-top: 0.5rem;">
+  <span id="busuanzi_value_page_pv">--</span>&nbsp;次阅读
+</div>
+{{- end }}
