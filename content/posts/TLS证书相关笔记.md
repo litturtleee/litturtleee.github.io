@@ -75,7 +75,7 @@ openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
 
 ## TLS握手流程
 
-![Drawing TLS握手流程.excalidraw](/images/Drawing TLS握手流程.excalidraw.svg)
+![TLS握手流程.excalidraw](/images/TLS握手流程.excalidraw.svg)
 
 1. 客户端发送随机数、支持的算法
 2. 服务端发送证书
