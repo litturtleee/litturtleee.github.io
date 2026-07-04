@@ -1,5 +1,5 @@
 ---
-title: litcontainer（一） 架构设计与容器生命周期
+title: litcontainer（一）：架构设计与容器生命周期
 date: 2026-07-03T00:00:00+08:00
 draft: false
 tags:
@@ -270,7 +270,7 @@ func (d *Daemon) reconcileContainer(state *ContainerState) {
 | shim ↔ runc | fork/exec + 命令行 + pid-file + exec.fifo | 相同 |
 | runc ↔ init | pipe 传 bootstrap + exec.fifo | runc 用 `_LIBCONTAINER_INITPIPE` + netlink 消息，思路相同 |
 
-IO 与流式协议（stdcopy、hijack、事件总线）见[第三篇](blog-3-io-protocol.md)；namespace/cgroup/pivot_root 等底层机制见[第二篇](litcontainer%20（二）：运行时原理%20——%20Namespace、pivot_root、cgroup%20与%20exec.md)。
+IO 与流式协议（stdcopy、hijack、事件总线）见[第三篇](litcontainer（三）：IO%20与通信协议.md)；namespace/cgroup/pivot_root 等底层机制见[第二篇](litcontainer%20（二）：运行时原理%20——%20Namespace、pivot_root、cgroup%20与%20exec.md)。
 
 ## 六、小结：与 Docker 对照速查
 
