@@ -7,8 +7,8 @@ tags:
 description: litcontainer运行时原理梳理
 ---
 >🐣 作者水平有限，内容仅供参考，如有错误欢迎评论指出。
->
-> 本文是 litcontainer 系列第二篇，聚焦最底层的 `litcontainer-runc`：一个容器进程是怎么被"隔离"出来的，以及 `exec` 。litcontainer-runc 是照着 runc 的骨架实现的简化版，本文会逐点对照 runc 的真实做法——哪些地方我们做得一样，哪些地方 runc 复杂得多、为什么。
+
+ 本文是 litcontainer 系列第二篇，聚焦最底层的 `litcontainer-runc`：一个容器进程是怎么被"隔离"出来的，以及 `exec` 。litcontainer-runc 是照着 runc 的骨架实现的简化版。
 
 容器的本质是**一个被 Namespace 隔离视图、被 cgroup 限制资源、被 pivot_root 切换了根文件系统的普通 Linux 进程**。下面按创建一个容器的真实执行顺序进行拆解。
 
