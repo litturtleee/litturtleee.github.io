@@ -1,5 +1,5 @@
 ---
-title: litcontainer 架构设计与容器litcontainer （二）：运行时原理 —— Namespace、pivot_root、cgroup 与 exec周期
+title: litcontainer （二）：运行时原理 —— Namespace、pivot_root、cgroup 与 exec
 date: 2026-07-04T00:00:00+08:00
 draft: false
 tags:
