@@ -7,7 +7,8 @@ tags:
 description: litcontainer运行时原理梳理
 ---
 >🐣 作者水平有限，内容仅供参考，如有错误欢迎评论指出。
-
+>
+> 项目地址：https://github.com/litturtleee/litcontainer
 
 本文是 litcontainer 系列第三篇，讲"数据怎么流"：容器的 stdout/stderr 如何跨三个进程送到用户终端、`log -f` 为什么能一直挂着、`exec` 的双向流如何在 HTTP 上实现。
 
