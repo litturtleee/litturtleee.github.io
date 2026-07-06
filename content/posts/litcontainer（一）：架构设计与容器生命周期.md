@@ -7,6 +7,8 @@ tags:
 description: litcontainer架构和容器生命周期整体梳理
 ---
 >🐣 作者水平有限，内容仅供参考，如有错误欢迎评论指出。
+>
+> 项目地址：https://github.com/litturtleee/litcontainer
 
 
 litcontainer 是笔者为了搞懂 Docker 内部原理而从零实现的容器运行时，架构上尽量向 Docker / containerd / runc 对齐。本文是系列第一篇，讲整体架构：容器引擎为什么要拆成多个进程、每个进程的职责边界在哪、一个容器从 create 到 rm 的完整生命周期是如何流转的。
