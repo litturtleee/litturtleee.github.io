@@ -7,6 +7,8 @@ tags:
 description: litcontainer运行时原理梳理
 ---
 >🐣 作者水平有限，内容仅供参考，如有错误欢迎评论指出。
+>
+> 项目地址：https://github.com/litturtleee/litcontainer
 
  本文是 litcontainer 系列第二篇，聚焦最底层的 `litcontainer-runc`：一个容器进程是怎么被"隔离"出来的，以及 `exec` 。litcontainer-runc 是照着 runc 的骨架实现的简化版。
 
